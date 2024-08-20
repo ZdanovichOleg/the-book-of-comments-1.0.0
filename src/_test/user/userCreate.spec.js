@@ -20,7 +20,9 @@ describe('USER CREATE', () => {
                 .end((err, res) => {
                     if(err) return done(err);
                     respData = res.body;
+
                     //console.log(respData);
+
                     expect(respData.data.userCreate.firstName).to.equal('testFirstName');
                     done()
                 })

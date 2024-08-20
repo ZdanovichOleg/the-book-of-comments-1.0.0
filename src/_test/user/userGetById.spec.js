@@ -1,3 +1,4 @@
+
 const  { expect}  = require("chai");
 const {userGetByIdQ} = require('./queries');
 const { user } = require('./data');
@@ -19,7 +20,9 @@ describe('USER GET BY ID', () => {
             .end((err, res) => {
                 if(err) return done(err);
                 respData = res.body.data.userGetById;
+
                 //console.log(respData);
+
                  expect(respData['_id']).to.equal('66bbc89ffced0603edcf18ff')
                  expect(respData.firstName).to.equal(user.userInput.firstName);
                  expect(respData.lastName).to.equal(user.userInput.lastName);

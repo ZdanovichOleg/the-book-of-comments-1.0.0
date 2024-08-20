@@ -14,6 +14,7 @@ const userGetByIdQ = `query UserGetById($userId: ID!) {
   }
 }`
 
+
 const userGetAllQ = `query UsersGetAll($amount: Int) {
 usersGetAll(amount: $amount) {
 _id
